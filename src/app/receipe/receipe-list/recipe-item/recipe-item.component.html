@@ -1,0 +1,16 @@
+<a style="cursor:pointer" 
+class="list-group-item clearfix" 
+routerLinkActive="active"
+[routerLink]="[index]" >
+       
+    <div class="float-left">
+        <h4 class="list-group-item-heading">
+            {{receipe.name }}
+        </h4>
+        <p class="list-group-item-text">{{ receipe.description}} </p>
+    </div>
+    <div class="float-right">
+        <img [src]="receipe.imagePath" alt="" class="img-responseive" style="max-height: 50px;">
+    </div>
+
+</a>

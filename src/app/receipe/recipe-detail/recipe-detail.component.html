@@ -1,0 +1,28 @@
+<div>
+    <img [src]="selectedReceipe.imagePath" alt=""class="img-fluid">
+
+    <h1>{{selectedReceipe.name}}</h1>
+
+    <div class="dropdown">
+        <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Manage Receipe<span class="caret"></span></button>
+        <ul class="dropdown-menu" >
+            <li><a class="dropdown-item"(click)="goToShoppingList()">To Shopping List</a></li>
+            <li><a class="dropdown-item" [routerLink]="['edit']">Edit Receipe</a></li>
+            <li><a class="dropdown-item" (click)="deleteReceipe()">Delete Receipe</a></li>
+        </ul>
+    </div>
+</div>
+
+<div>
+    {{selectedReceipe.description}}
+</div>
+<div>
+    <ul class="list-group">
+        <li
+           class="list-group-item" 
+           *ngFor="let ingredient of selectedReceipe.ingredients"
+        >
+        {{ingredient.name}} - {{ ingredient.amount }}
+        </li>
+    </ul>
+</div>

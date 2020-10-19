@@ -1,0 +1,17 @@
+<div class ="row">
+    <div class="col-xs-12">
+        <button class = "btn btn-success" (click) = "onNewReceipe()">New Receipe</button>
+    </div>
+</div>
+
+<div class="list-group">
+    
+
+    <app-recipe-item 
+        *ngFor="let receipe of receipes; let i = index" 
+        [receipe]="receipe"
+        [index]="i"
+    >
+    </app-recipe-item>
+
+  </div>
